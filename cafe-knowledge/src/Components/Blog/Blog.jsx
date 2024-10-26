@@ -1,7 +1,7 @@
+import { IoIosBookmark } from "react-icons/io";
 import PropTypes from "prop-types";
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
   const {
-    id,
     title,
     cover,
     author,
@@ -11,13 +11,13 @@ const Blog = ({ blog }) => {
     hashtags,
   } = blog;
   return (
-    <div>
+    <div className="mb-20 space-y-4">
       <img
-        className="w-full rounded-lg mt-2"
+        className="w-full mb-8 rounded-lg mt-2"
         src={cover}
         alt={`cover picture of ${title}`}
       />
-      <div className="flex justify-between items-center mt-3">
+      <div className="flex justify-between  mt-3">
         <div className="flex justify-center">
           <img className="w-14" src={author_img} alt="" />
           <div className="ml-4">
@@ -26,22 +26,39 @@ const Blog = ({ blog }) => {
           </div>
         </div>
         <div>
-          <span>{reading_time} mins read</span>
+          <span className="text-xl">{reading_time} mins read</span>
+          <button
+            onClick={() => handleAddToBookmark(blog)}
+            className="ml-1 text-blue-500 text-2xl"
+          >
+            <IoIosBookmark></IoIosBookmark>
+          </button>
         </div>
       </div>
 
-      <h2 className="text-4xl">{title}</h2>
-      {hashtags.map((hashtag, idx) => (
-        <span key={idx}>
-          <a href="">#{hashtag}</a>
-        </span>
-      ))}
+      <h2 className="text-4xl mb-4">{title}</h2>
+      <p>
+        {hashtags.map((hashtag, idx) => (
+          <span key={idx}>
+            <a href="">#{hashtag}</a>
+          </span>
+        ))}
+      </p>
+
+      <button
+        onClick={() => handleMarkAsRead(reading_time)}
+        className="text-purple-600 font-bold underline"
+      >
+        Mark As Read
+      </button>
     </div>
   );
 };
 
 Blog.propTypes = {
   blog: PropTypes.object.isRequired,
+  handleAddToBookmark: PropTypes.func,
+  handleMarkAsRead: PropTypes.func,
 };
 
 export default Blog;

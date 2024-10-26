@@ -13,10 +13,14 @@ function App() {
     setBookmark(newBookmarks);
   };
 
-  const handleMarkAsRead = (time) => {
+  const handleMarkAsRead = (time, id) => {
     // console.log("reading time Adding Soon", time);
     const newReadingTime = time + redingTime;
     setReadingTime(newReadingTime);
+    const remainingBookMark = bookmarks.filter(
+      (bookmark) => bookmark.id !== id
+    );
+    setBookmark(remainingBookMark);
   };
 
   return (

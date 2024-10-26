@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "cover": "https://i.ibb.co/fDyKPFV/1.jpg",
+    "title": "Understanding the Basics of Artificial Intelligence",
+    "author": "Jane Doe",
+    "author_img": "https://i.ibb.co/n7zf9Tf/boy1.png",
+    "posted_date": "2024-01-15",
+    "reading_time": 5,
+    "hashtags": ["AI", "MachineLearning", "Technology"]
+  },
+  {
+    "id": 2,
+    "cover": "https://i.ibb.co/tc27xz1/2.png",
+    "title": "10 Tips for a Healthier Lifestyle",
+    "author": "John Smith",
+    "author_img": "https://i.ibb.co/KVkm1h6/boy2.jpg",
+    "posted_date": "2024-02-10",
+    "reading_time": 7,
+    "hashtags": ["Health", "Wellness", "Lifestyle"]
+  },
+  {
+    "id": 3,
+    "cover": "https://i.ibb.co/WzTyB2Y/3.png",
+    "title": "The Future of Remote Work",
+    "author": "Emily Brown",
+    "author_img": "https://i.ibb.co/6HFF7Rh/girl1.jpg",
+    "posted_date": "2024-03-05",
+    "reading_time": 6,
+    "hashtags": ["RemoteWork", "Career", "Productivity"]
+  },
+  {
+    "id": 4,
+    "cover": "https://i.ibb.co/pvRH00v/4.jpg",
+    "title": "Top 10 Travel Destinations for 2024",
+    "author": "Mike Green",
+    "author_img": "https://i.ibb.co/kDxf7Hg/girl2.jpg",
+    "posted_date": "2024-04-20",
+    "reading_time": 4,
+    "hashtags": ["Travel", "Adventure", "Destinations"]
+  }
+]
